@@ -1,0 +1,30 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Catalogue de produits {% endblock title %}
+{% block content %}
+
+<!-- body -->
+<div class="container-fluid mt-3">
+    <div class="row">
+       <!-- all products -->
+        <div id='products' class="col-lg-9 mx-auto">
+            <div class="row mx-auto">
+               {% for product in list %}
+                <div  id="{{ product.id }}" style="width: 18rem;">
+                    <a href="{{ product.get_absolute_url }}">
+                    <img  src="{{ product.img.url }}" alt="Card image cap">
+                    </a>
+                    <div >
+                        <p >{{ product.libelle }}</p>
+                        <p ><b>{{ product.description }}</b></p>
+                        <a href="{% url 'magasin:detail_produit' slug=product.slug %}">
+                            <button>Details</button>
+                        </a> <!-- Corrected the closing anchor tag here -->
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

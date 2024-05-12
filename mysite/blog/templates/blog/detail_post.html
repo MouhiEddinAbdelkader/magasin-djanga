@@ -1,0 +1,23 @@
+{% load static %}
+{% block title %} blog {% endblock title %}
+{% block styles %} 
+    <link rel='stylesheet' type='text/css' media='screen' 
+		href="{% static 'css/detail_post.css'%}">
+    {% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>{{ post.title }}</h1>
+<p><strong>Slog:</strong> {{ post.slug }}</p>
+<p><strong>Author:</strong> {{ post.author }}</p>
+<p><strong>Created On:</strong> {{ post.created_on }}</p>
+<p><strong>Last Updated On:</strong> {{ post.updated_on }}</p>
+<p><strong>Status:</strong> {{ post.get_status_display }}</p>
+<div>
+    {{ post.content|safe }}
+</div>
+{% if post.image %}
+    <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
+{% endif%}
+</div>
+    {%  endblock %}

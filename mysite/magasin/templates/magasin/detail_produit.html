@@ -1,0 +1,23 @@
+{% extends "magasin/base.html" %} 
+
+{%block title%}
+{{ article.libelle }}
+{% endblock %}
+
+{% block content %}
+    <section>
+    <h1>{{ article.libelle }}</h1>
+            <img   
+            class="banner"
+            src="{{ article.banner.url }}" 
+            alt="{{article.libelle}}"
+            />
+            <h2>{{ article.title }}</h2>
+            
+            <p>{{ article.description }}</p>
+            <p>{{ article.prix }}</p>
+      
+</section>
+{% endblock %}
+
+

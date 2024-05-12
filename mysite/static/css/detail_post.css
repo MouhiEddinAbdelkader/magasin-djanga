@@ -1,0 +1,32 @@
+/* detail_post.css */
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Ajoutez ici d'autres styles selon vos besoins */

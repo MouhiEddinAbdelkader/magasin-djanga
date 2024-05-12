@@ -1,0 +1,36 @@
+/* creer_post.css */
+
+/* Center the form */
+form {
+    width: 50%; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+/* Style form elements */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff; /* Change as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Change as needed */
+}
+
+/* Optional: Style CSRF token input */
+input[type="hidden"][name="csrfmiddlewaretoken"] {
+    display: none; /* Hide CSRF token input */
+}

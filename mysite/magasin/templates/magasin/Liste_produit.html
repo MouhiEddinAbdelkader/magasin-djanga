@@ -1,0 +1,24 @@
+{% extends 'magasin/base.html' %}
+{% block title %} des produits {% endblock title %}
+
+{% block content %}
+  <h1>Produit List</h1>
+  {% if list %}
+    <ul>
+        {% for product in list %}
+        <div  id={{product.id}} style="width: 18rem;">
+            <img  src="{{product.img.url}}" alt="Card image cap">
+           
+            <div >
+                <p >{{product.libelle}}</p>
+                <p ><b>{{product.description}}</b></p>
+                
+            </div>
+
+         </div>
+        {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no product in the magasin.</p>
+  {% endif %}
+{% endblock %}

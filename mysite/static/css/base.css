@@ -1,0 +1,182 @@
+.conteneur
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Style de base pour le conteneur */
+.container-fluid {
+    padding: 20px;
+}
+
+/* Style pour les images des produits */
+#products img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style pour le libellé du produit */
+#products p {
+    margin: 0;
+}
+
+/* Style pour la description du produit */
+#products p b {
+    color: #333;
+}
+
+/* Style pour les cartes de produits */
+#products .row > div {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour le conteneur principal */
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style pour chaque carte de produit */
+#products > .row > div {
+    flex-basis: calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+}
+
+/* Media query pour la mise en page sur les appareils mobiles */
+@media (max-width: 768px) {
+    #products > .row > div {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Styles pour le formulaire */
+.post-form {
+    width: 80%; /* Largeur du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    padding: 20px; /* Espacement autour du formulaire */
+    border: 1px solid #ccc; /* Bordure autour du formulaire */
+    border-radius: 5px; /* Coins arrondis du formulaire */
+}
+
+/* Styles pour les éléments de formulaire */
+.post-form input[type="text"],
+.post-form textarea {
+    width: 100%; /* Largeur de tous les champs de texte */
+    padding: 10px; /* Espacement à l'intérieur des champs de texte */
+    margin-bottom: 10px; /* Espacement entre les champs de texte */
+    border: 1px solid #ccc; /* Bordure autour des champs de texte */
+    border-radius: 5px; /* Coins arrondis des champs de texte */
+}
+
+/* Styles pour le bouton de soumission */
+.post-form button[type="submit"] {
+    padding: 10px 20px; /* Espacement à l'intérieur du bouton */
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Curseur de souris en forme de main */
+}
+
+/* Styles pour les messages d'erreur */
+.alert {
+    margin-bottom: 10px; /* Espacement entre les messages d'erreur et le formulaire */
+    padding: 10px; /* Espacement à l'intérieur des messages d'erreur */
+    border-radius: 5px; /* Coins arrondis des messages d'erreur */
+}
+.alert-danger {
+    background-color: #f8d7da; /* Couleur de fond pour les messages d'erreur */
+    color: #721c24; /* Couleur du texte pour les messages d'erreur */
+    border: 1px solid #f5c6cb; /* Bordure pour les messages d'erreur */
+}
+
+
+
+/* Resetting default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Main text color */
+}
+
+/* Navigation styles */
+nav {
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Navigation text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #007bff;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffc107; /* Change color on hover */
+}
+
+/* Content styles */
+.content {
+    padding: 20px;
+}
+
+/* User welcome message styles */
+.user-message {
+    margin-top: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+}
